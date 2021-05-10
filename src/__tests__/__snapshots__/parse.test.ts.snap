@@ -1,0 +1,330 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse parseToGenerator should print out generate-runtypes schema from proto2 1`] = `
+"[
+  {
+    \\"name\\": \\"Invoice\\",
+    \\"type\\": {
+      \\"kind\\": \\"record\\",
+      \\"fields\\": [
+        {
+          \\"name\\": \\"name\\",
+          \\"type\\": {
+            \\"kind\\": \\"string\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        },
+        {
+          \\"name\\": \\"description\\",
+          \\"type\\": {
+            \\"kind\\": \\"string\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        },
+        {
+          \\"name\\": \\"status\\",
+          \\"type\\": {
+            \\"kind\\": \\"union\\",
+            \\"types\\": [
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_UNSPECIFIED\\"
+              },
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_PENDING\\"
+              },
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_SENT\\"
+              },
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_AWAITING_PAYMENT\\"
+              },
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_PAID\\"
+              },
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_DEPT_COLLECTION\\"
+              }
+            ]
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        }
+      ]
+    }
+  },
+  {
+    \\"name\\": \\"Point\\",
+    \\"type\\": {
+      \\"kind\\": \\"record\\",
+      \\"fields\\": [
+        {
+          \\"name\\": \\"x\\",
+          \\"type\\": {
+            \\"kind\\": \\"number\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        },
+        {
+          \\"name\\": \\"y\\",
+          \\"type\\": {
+            \\"kind\\": \\"number\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        },
+        {
+          \\"name\\": \\"label\\",
+          \\"type\\": {
+            \\"kind\\": \\"string\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        }
+      ]
+    }
+  },
+  {
+    \\"name\\": \\"Line\\",
+    \\"type\\": {
+      \\"kind\\": \\"record\\",
+      \\"fields\\": [
+        {
+          \\"name\\": \\"start\\",
+          \\"type\\": {
+            \\"kind\\": \\"named\\",
+            \\"name\\": \\"Point\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        },
+        {
+          \\"name\\": \\"end\\",
+          \\"type\\": {
+            \\"kind\\": \\"named\\",
+            \\"name\\": \\"Point\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        },
+        {
+          \\"name\\": \\"label\\",
+          \\"type\\": {
+            \\"kind\\": \\"string\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        }
+      ]
+    }
+  }
+]"
+`;
+
+exports[`parse parseToGenerator should print out generate-runtypes schema from proto2 2`] = `
+"import * as rt from \\"runtypes\\";
+
+const invoice = rt
+  .Record({
+    name: rt.String,
+    description: rt.String,
+    status: rt.Union(
+      rt.Literal(\\"INVOICE_STATUS_UNSPECIFIED\\"),
+      rt.Literal(\\"INVOICE_STATUS_PENDING\\"),
+      rt.Literal(\\"INVOICE_STATUS_SENT\\"),
+      rt.Literal(\\"INVOICE_STATUS_AWAITING_PAYMENT\\"),
+      rt.Literal(\\"INVOICE_STATUS_PAID\\"),
+      rt.Literal(\\"INVOICE_STATUS_DEPT_COLLECTION\\")
+    ),
+  })
+  .asPartial();
+
+type Invoice = rt.Static<typeof invoice>;
+
+const point = rt
+  .Record({ x: rt.Number, y: rt.Number, label: rt.String })
+  .asPartial();
+
+type Point = rt.Static<typeof point>;
+
+const line = rt
+  .Record({ start: point, end: point, label: rt.String })
+  .asPartial();
+
+type Line = rt.Static<typeof line>;
+"
+`;
+
+exports[`parse parseToGenerator should print out generate-runtypes schema from proto3 1`] = `
+"[
+  {
+    \\"name\\": \\"Invoice\\",
+    \\"type\\": {
+      \\"kind\\": \\"record\\",
+      \\"fields\\": [
+        {
+          \\"name\\": \\"name\\",
+          \\"type\\": {
+            \\"kind\\": \\"string\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": false
+        },
+        {
+          \\"name\\": \\"description\\",
+          \\"type\\": {
+            \\"kind\\": \\"string\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": false
+        },
+        {
+          \\"name\\": \\"status\\",
+          \\"type\\": {
+            \\"kind\\": \\"union\\",
+            \\"types\\": [
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_UNSPECIFIED\\"
+              },
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_PENDING\\"
+              },
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_SENT\\"
+              },
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_AWAITING_PAYMENT\\"
+              },
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_PAID\\"
+              },
+              {
+                \\"kind\\": \\"literal\\",
+                \\"value\\": \\"INVOICE_STATUS_DEPT_COLLECTION\\"
+              }
+            ]
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        }
+      ]
+    }
+  },
+  {
+    \\"name\\": \\"Point\\",
+    \\"type\\": {
+      \\"kind\\": \\"record\\",
+      \\"fields\\": [
+        {
+          \\"name\\": \\"x\\",
+          \\"type\\": {
+            \\"kind\\": \\"number\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": false
+        },
+        {
+          \\"name\\": \\"y\\",
+          \\"type\\": {
+            \\"kind\\": \\"number\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": false
+        },
+        {
+          \\"name\\": \\"label\\",
+          \\"type\\": {
+            \\"kind\\": \\"string\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        }
+      ]
+    }
+  },
+  {
+    \\"name\\": \\"Line\\",
+    \\"type\\": {
+      \\"kind\\": \\"record\\",
+      \\"fields\\": [
+        {
+          \\"name\\": \\"start\\",
+          \\"type\\": {
+            \\"kind\\": \\"named\\",
+            \\"name\\": \\"Point\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": false
+        },
+        {
+          \\"name\\": \\"end\\",
+          \\"type\\": {
+            \\"kind\\": \\"named\\",
+            \\"name\\": \\"Point\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": false
+        },
+        {
+          \\"name\\": \\"label\\",
+          \\"type\\": {
+            \\"kind\\": \\"string\\"
+          },
+          \\"export\\": true,
+          \\"nullable\\": true
+        }
+      ]
+    }
+  }
+]"
+`;
+
+exports[`parse parseToGenerator should print out generate-runtypes schema from proto3 2`] = `
+"import * as rt from \\"runtypes\\";
+
+const Invoice = rt.Intersect(
+  rt.Record({ name: rt.String, description: rt.String }),
+  rt
+    .Record({
+      status: rt.Union(
+        rt.Literal(\\"INVOICE_STATUS_UNSPECIFIED\\"),
+        rt.Literal(\\"INVOICE_STATUS_PENDING\\"),
+        rt.Literal(\\"INVOICE_STATUS_SENT\\"),
+        rt.Literal(\\"INVOICE_STATUS_AWAITING_PAYMENT\\"),
+        rt.Literal(\\"INVOICE_STATUS_PAID\\"),
+        rt.Literal(\\"INVOICE_STATUS_DEPT_COLLECTION\\")
+      ),
+    })
+    .asPartial()
+);
+
+type Invoice = rt.Static<typeof Invoice>;
+
+const Point = rt.Intersect(
+  rt.Record({ x: rt.Number, y: rt.Number }),
+  rt.Record({ label: rt.String }).asPartial()
+);
+
+type Point = rt.Static<typeof Point>;
+
+const Line = rt.Intersect(
+  rt.Record({ start: Point, end: Point }),
+  rt.Record({ label: rt.String }).asPartial()
+);
+
+type Line = rt.Static<typeof Line>;
+"
+`;

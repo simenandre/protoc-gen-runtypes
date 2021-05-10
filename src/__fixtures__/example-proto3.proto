@@ -1,0 +1,27 @@
+syntax = "proto2";
+
+message Invoice {
+  required string name = 1;
+  required string description = 2;
+  enum InvoiceStatus {
+    INVOICE_STATUS_UNSPECIFIED = 0;
+    INVOICE_STATUS_PENDING = 1;
+    INVOICE_STATUS_SENT = 2;
+    INVOICE_STATUS_AWAITING_PAYMENT = 3;
+    INVOICE_STATUS_PAID = 4;
+    INVOICE_STATUS_DEPT_COLLECTION = 5;
+  }
+  optional InvoiceStatus status = 3;
+}
+
+message Point {
+  required int32 x = 1;
+  required int32 y = 2;
+  optional string label = 3;
+}
+
+message Line {
+  required Point start = 1;
+  required Point end = 2;
+  optional string label = 3;
+}
