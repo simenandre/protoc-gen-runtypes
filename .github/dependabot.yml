@@ -1,6 +1,23 @@
 version: 2
 updates:
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: 'daily'
+      interval: "daily"
+    labels:
+      - "impact/no-changelog-required"
+      - "github_actions"
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: "typescript*"
+      - dependency-name: "get-stdin"
+      - dependency-name: "@types/node"
+        versions: ["15.x"]
+    labels:
+      - "impact/no-changelog-required"
+      - "javascript"
+      - "dependencies"
