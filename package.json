@@ -6,7 +6,7 @@
   "repository": "git@github.com:cobraz/protoc-gen-runtypes",
   "license": "Apache-2.0",
   "bin": {
-    "protoc-gen-ts_proto": "./protoc-gen-ts_proto"
+    "protoc-gen-runtypes": "./bin/protoc-gen-runtypes"
   },
   "files": [
     "build"
