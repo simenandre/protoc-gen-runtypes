@@ -6,11 +6,20 @@
 [![NPM version](https://img.shields.io/npm/v/protoc-gen-runtypes.svg)](https://www.npmjs.com/package/protoc-gen-runtypes)
 [![codecov](https://codecov.io/gh/cobraz/protoc-gen-runtypes/branch/main/graph/badge.svg)](https://codecov.io/gh/cobraz/protoc-gen-runtypes)
 
-`protoc-gen-runtypes` is a [protoc](https://github.com/google/protobuf) plugin that generates
-Runtypes types from Protobuf files.
+`protoc-gen-runtypes` is a [protoc](https://github.com/google/protobuf) plugin
+that generates Runtypes types from Protobuf files.
 
 We are thankful for all help with adding new functionality, fixing issues, or
 improve the package. Feel free to open issues and pull requests ❤️
+
+## Quickstart
+
+```shell
+▶ yarn add protoc-gen-runtypes
+```
+
+If you use [buf](https://buf.build/), you can find an example
+[here](./buf.gen.yaml).
 
 ## Documentation
 
