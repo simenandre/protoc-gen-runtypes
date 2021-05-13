@@ -1,0 +1,5 @@
+version: v1beta1
+plugins:
+  - name: protoc-gen-runtypes
+    path: bin/protoc-gen-runtypes
+    out: test-out
