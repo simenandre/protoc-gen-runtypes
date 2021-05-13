@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package fixtures;
+
+import "src/__fixtures__/example-proto3.proto";
+
+message ReferenceToInvoice {
+  fixtures.Invoice inv = 1;
+  optional fixtures.Invoice inv2 = 3;
+}

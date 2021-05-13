@@ -1,8 +1,10 @@
-syntax = "proto2";
+syntax = "proto3";
+
+package fixtures;
 
 message Invoice {
-  required string name = 1;
-  required string description = 2;
+  string name = 1;
+  string description = 2;
   enum InvoiceStatus {
     INVOICE_STATUS_UNSPECIFIED = 0;
     INVOICE_STATUS_PENDING = 1;
@@ -15,13 +17,13 @@ message Invoice {
 }
 
 message Point {
-  required int32 x = 1;
-  required int32 y = 2;
+  int32 x = 1;
+  int32 y = 2;
   optional string label = 3;
 }
 
 message Line {
-  required Point start = 1;
-  required Point end = 2;
+  Point start = 1;
+  Point end = 2;
   optional string label = 3;
 }
