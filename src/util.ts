@@ -7,7 +7,7 @@ export function filePathToPseudoNamespace(filePath: string): string {
       .replace('.proto', '')
       .replace(/\//g, '_')
       .replace(/\./g, '_')
-      .replace(/\-/g, '_') + '_pb'
+      .replace(/-/g, '_') + '_pb'
   );
 }
 
@@ -43,7 +43,7 @@ export function stripPrefix(str: string, prefix: string): string {
 }
 
 export function snakeToCamel(str: string): string {
-  return str.replace(/(\_\w)/g, function (m) {
+  return str.replace(/(_\w)/g, function (m) {
     return m[1].toUpperCase();
   });
 }

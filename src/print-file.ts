@@ -1,4 +1,4 @@
-import { generateRuntypes, RootType, GenerateOptions } from 'generate-runtypes';
+import { GenerateOptions, RootType, generateRuntypes } from 'generate-runtypes';
 import { FileDescriptorProto } from 'google-protobuf/google/protobuf/descriptor_pb';
 import { CodeWriter } from './code-writer';
 import { ExportMap } from './export-map';
