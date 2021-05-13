@@ -42,7 +42,9 @@
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
     "ts-jest": "~26.5.5",
-    "typescript": "~4.2.4"
+    "typescript": "~4.2.4",
+    "typedoc": "^0.20.35",
+    "typedoc-plugin-markdown": "^3.7.1"
   },
   "dependencies": {
     "generate-runtypes": "^2.1.0",
