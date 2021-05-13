@@ -12,6 +12,12 @@ that generates Runtypes types from Protobuf files.
 We are thankful for all help with adding new functionality, fixing issues, or
 improve the package. Feel free to open issues and pull requests ❤️
 
+**Note**: This plugin is not released yet, see
+[#15](https://github.com/cobraz/protoc-gen-runtypes/issues/15) for more! If you
+are looking to convert some Protobuf files right away, I have another that does
+just that (without using `protoc`):
+[protobuf-to-runtypes](https://github.com/cobraz/protobuf-to-runtypes)
+
 ## Quickstart
 
 ```shell
