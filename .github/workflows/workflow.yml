@@ -45,7 +45,7 @@ jobs:
 
       - run: yarn test --passWithNoTests
 
-      - uses: codecov/codecov-action@v1
+      - uses: codecov/codecov-action@v3
 
       - if: ${{ steps.release.outputs.release_created }}
         run: yarn publish
