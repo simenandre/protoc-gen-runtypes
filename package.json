@@ -2,7 +2,7 @@
   "name": "protoc-gen-runtypes",
   "version": "0.0.0",
   "description": "Generato Runtypes with Protoc",
-  "repository": "github:cobraz/protoc-gen-runtypes",
+  "repository": "github:simenandre/protoc-gen-runtypes",
   "license": "Apache-2.0",
   "main": "dist/plugin.js",
   "bin": {
