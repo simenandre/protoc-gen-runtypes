@@ -651,10 +651,10 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.2.3.tgz#ef65165aea2924c9359205bf748865b8881753c0"
   integrity sha512-PijRCG/K3s3w1We6ynUKdxEc5AcuuH3NBmMDP8uvKVp6X43UY7NQlTzczakXP3DJR0F4dfNQIGjU2cUeRYs2AA==
 
-"@types/protoc-plugin@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@types/protoc-plugin/-/protoc-plugin-0.0.1.tgz#2ecb019e8862588a745feff3c4ac1bcc2d9a3fe9"
-  integrity sha512-lbKaYQMNSxtfwDSwuxnTQqVW1N7S82VRw6kKfTYXhoN14PJVt5cuqlS3QeEMWwsZYeX/aU5QYO/aAG481+81jw==
+"@types/protoc-plugin@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@types/protoc-plugin/-/protoc-plugin-0.0.6.tgz#00f98025cacf1152ec3bc4c4dd0d2a0dda642e7d"
+  integrity sha512-L9DNgLgudFDYhiojJfGbEglKawOPIw6gy6aOSNQJWbshQi75cBvMcI2krT3oAXPmm8+fCK2Um4ReDR/V+Rhrjg==
   dependencies:
     "@types/google-protobuf" "*"
     "@types/node" "*"
